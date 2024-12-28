@@ -1,12 +1,12 @@
 <template>
   <l-map ref="map" v-model:zoom="zoom" :center="[25, -110]">
-    <l-svg-overlay
+    <LSVGOverlay
       :url="svg"
       :bounds="[
         [32, -130],
         [13, -100],
       ]"
-    ></l-svg-overlay>
+    ></LSVGOverlay>
     <l-tile-layer
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       layer-type="base"
@@ -38,12 +38,10 @@ svgElement.innerHTML = `
         height="50"
         style="fill:#0013ff"/>`;
 
-console.log({ svgElement });
-
 export default {
   components: {
     LMap,
-    "l-svg-overlay": LSVGOverlay,
+    LSVGOverlay,
     LTileLayer,
   },
   data() {
@@ -54,5 +52,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
