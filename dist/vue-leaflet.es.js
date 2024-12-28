@@ -1122,7 +1122,7 @@ const de = (t, o) => {
     const e = c(), n = c(!1), s = O(h), r = y(M), { options: l, methods: a } = zt(t, e, o);
     return _(async () => {
       const { svgOverlay: i } = s ? v.L : await import("leaflet/dist/leaflet-src.esm");
-      console.log({ svgOverlay: i }), e.value = j(
+      e.value = j(
         i(t.url, t.bounds, l)
       );
       const { listeners: u } = T(o.attrs);

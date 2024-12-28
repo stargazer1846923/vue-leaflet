@@ -42,7 +42,6 @@ export default defineComponent({
       const { svgOverlay }: typeof L = useGlobalLeaflet
         ? WINDOW_OR_GLOBAL.L
         : await import("leaflet/dist/leaflet-src.esm");
-      console.log({ svgOverlay });
 
       leafletObject.value = markRaw<L.SVGOverlay>(
         svgOverlay(props.url, props.bounds, options)
